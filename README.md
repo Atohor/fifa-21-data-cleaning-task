@@ -17,9 +17,6 @@ my prefered tool for this Data cleaning challenge based on proficiency is Power 
 ## Data Cleaning process
 ![image](https://user-images.githubusercontent.com/99989624/224600574-6e1e90ec-4fa6-4dfc-9b8d-976df3ea6981.png)
 
-![image](https://user-images.githubusercontent.com/99989624/224600737-699ff508-da6a-4847-a99d-85496ba052d2.png)
-
-
 To ensure data quality , the following approach was used 
 
 After loading the data , whitespaces were removed by unticking the button from the viewtab 
@@ -162,6 +159,12 @@ These three columns contains euro values in shortenend format where 1,500 euros 
 The goal is to standardise the columns and convert to US dollars
 Hence the approach used was to dropped the euro symbol from all rows using find and replace, then split columns by m and k 
 
-first step was to create a New column which If column 1 contains m multiplies the figure by 100000 else if column 1 contains k multiply by 1000 else return the figure on the original column , this else function handles the values , or wages in hundreds and no K or M attached 
+first step was to create a New column which If column 1 contains m multiplies the figure by 100000 then if column 1 contains k multiply by 1000 else return the figure on the original column , this else function handles the values , or wages in hundreds having no K or M attached .
+
 this approach gives the full numeric form of the value , wage or release clause but wait! we are not done yet .
 To convert this full numeric digits to USD , the average euro to USD exchange rate of 1.183 was used as this was the average exchange rate as at 2021 which our data is based on.
+
+| Before | After |
+|--------|-------|
+![image](https://user-images.githubusercontent.com/99989624/224848874-1db3b234-8f91-4a58-8aa8-62e4db072d38.png)|![image](https://user-images.githubusercontent.com/99989624/224849112-0e74cdb0-ceb6-4a38-bc4d-4efc3f9ccf43.png)
+
