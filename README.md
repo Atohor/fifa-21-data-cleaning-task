@@ -168,3 +168,23 @@ To convert this full numeric digits to USD , the average euro to USD exchange ra
 |--------|-------|
 ![image](https://user-images.githubusercontent.com/99989624/224848874-1db3b234-8f91-4a58-8aa8-62e4db072d38.png)|![image](https://user-images.githubusercontent.com/99989624/224849112-0e74cdb0-ceb6-4a38-bc4d-4efc3f9ccf43.png)
 
+<div align="center">
+    <h2>W/F , SM , IR</h2>
+</div>
+These three columns contains player ratings in different aspect with a ranking of 1-5 . However a star symbol was attached to each row and this was removed using the replace function and the data type was changed to numeric.
+
+| Before | After |
+|--------|-------|
+![image](https://user-images.githubusercontent.com/99989624/224855858-546c4bdf-adb2-421a-a459-f799a7f1a241.png)|![image](https://user-images.githubusercontent.com/99989624/224855981-166a7132-bbb1-4451-89e5-62f9b43d66dd.png)
+
+<div align="center">
+    <h2>Hits</h2>
+</div>
+The filter pane reveals some figures in this column were coded in the shortened version, such as 1500 written as 1.5k. These were regularized using a similar approach as previously used and explained for the values and wages column.
+
+| Before | After |
+|--------|-------|
+![image](https://user-images.githubusercontent.com/99989624/224856470-037630d2-1429-4644-b107-d5b88323fa32.png)|![image](https://user-images.githubusercontent.com/99989624/224856581-0ff90894-e6da-4edc-b25a-850a3b59e966.png)
+
+
+
