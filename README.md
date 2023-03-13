@@ -133,4 +133,35 @@ Notice the data type of the contract start and contract end data type is ABC tex
 ![image](https://user-images.githubusercontent.com/99989624/224841755-aac24509-7c26-40e5-b46b-4cdc8ddca9e7.png)|![image](https://user-images.githubusercontent.com/99989624/224841978-f61c750b-4ae4-40fe-9af7-8f7208547b2b.png)
 
 
+<div align="center">
+    <h2>Height</h2>
+</div>
 
+The majority of values in this column displays height in centimeter. while a few others uses feet and inches for example 6'2" . Initial thought was just to split by the delimiter ' " and multiply by 30.48 which is the standard conversion of feet to cm . However a quick google search reveals this formula only accounts for feet and not inches hence to resolve this after splitting, the feet column was multplied by 30.48 and the inches column by 2.48. then both columns were merged using addition and rounded up to the nearest whole number. then the cm text value was dropped from the other rows to successfully change the data type to numeric
+
+| Before | After |
+|--------|-------|
+![image](https://user-images.githubusercontent.com/99989624/224844971-31f4648e-2b1f-42d8-99b7-84e1a376a428.png)| ![image](https://user-images.githubusercontent.com/99989624/224845368-72935580-ede4-44b1-94bd-d5db1d4866e8.png)
+
+
+<div align="center">
+    <h2>Weight</h2>
+</div>
+About 60% of the data values in this column contains weight in lbs (pounds) and the other 40% in Kg . After splitting the column using Digits to non-digits function,  A decision was made to unify all data values as lbs 
+and the standard conversion rate of 2.205 was used to multiply the weight in Kg value to give the equivalent in lbs and rounded up.
+
+| Before | After |
+|--------|-------|
+![image](https://user-images.githubusercontent.com/99989624/224845690-2cb91c6f-bcf9-478f-b1d7-0dc5cc0e8b76.png)|![image](https://user-images.githubusercontent.com/99989624/224846437-d180ffa8-277e-400c-aa69-a2051aed01f5.png)
+
+
+<div align="center">
+    <h2>Value , Wage and release clause</h2>
+</div>
+These three columns contains euro values in shortenend format where 1,500 euros was written as 1.5k and one million ,five hundred euros as 1.5m.
+The goal is to standardise the columns and convert to US dollars
+Hence the approach used was to dropped the euro symbol from all rows using find and replace, then split columns by m and k 
+
+first step was to create a New column which If column 1 contains m multiplies the figure by 100000 else if column 1 contains k multiply by 1000 else return the figure on the original column , this else function handles the values , or wages in hundreds and no K or M attached 
+this approach gives the full numeric form of the value , wage or release clause but wait! we are not done yet .
+To convert this full numeric digits to USD , the average euro to USD exchange rate of 1.183 was used as this was the average exchange rate as at 2021 which our data is based on.
