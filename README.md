@@ -72,7 +72,7 @@ to generate a first name and last name column. Hyphenated or double last names l
 
 
 
-However to sort Diacritic names, like spanish names with accent  , The player url was used to extract those names to get a cleaner version 
+However to sort Diacritic names, like spanish names with accent  , The player url was used to extract those names to get a cleaner version. 
 Filter to see places with Diacritics for the first letter of the alphabet and replace with clean version. If this is not done, during visualization, sorting the names in alphabetical order, ascending or descending will result in those names appearing last after Z.
 
 | Before | After |
@@ -81,16 +81,18 @@ Filter to see places with Diacritics for the first letter of the alphabet and re
 
 
 
+finally Names like C. Ronaldo , A. Benjamin , G. Paiva were standardized to reflect the full first name
 
+<div align="center">
+    <h2>Percentages</h2>
+</div>
 
+As advised by the Data Dictionary , the columns OVA and POT were reformatted to reflect percentages.
+Column from example was used to add % to the end of the row figures ,then the data type was changed to percentage
 
-
-Also some name have only one alphabet 
-
-Like c. Ronaldo , g. Pierre , a.Benjamin 
-
-
-
+| Before | After |
+|--------|-------|
+![image](https://user-images.githubusercontent.com/99989624/224689449-f6a490f1-e016-4058-9373-71487095283d.png)|![image](https://user-images.githubusercontent.com/99989624/224689726-1884d63f-e22e-4b70-8a67-3dbead6aa4ed.png)
 
 
 
