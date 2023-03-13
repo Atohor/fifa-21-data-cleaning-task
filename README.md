@@ -187,4 +187,12 @@ The filter pane reveals some figures in this column were coded in the shortened 
 ![image](https://user-images.githubusercontent.com/99989624/224856470-037630d2-1429-4644-b107-d5b88323fa32.png)|![image](https://user-images.githubusercontent.com/99989624/224856581-0ff90894-e6da-4edc-b25a-850a3b59e966.png)
 
 
+<div align="center">
+    <h2>CONCLUSION</h2>
+</div>
+At the end of the day, Data validation was done to verify that the data is accurate, complete, and consistent. Conclusively after what posed to be a Herculean task at first glance, i'm glad i rose up to the occassion to take the bull by the horn in participating in this #DatacleaningChallenge. This has served as a great learning curve for an Intermediate level analyst like me.
 
+Honing my analytical skills is a never ending journey hence i'm open to suggestions , recommendations and improvement .
+I'm also willing to guide other participants in this project.
+
+You can reach out to me on Twitter [@PidginAnalyst](https://twitter.com/Pidginanalyst) | Instagram  [@PidginAnalyst](https://Instagram.com/Pidginanalyst)
