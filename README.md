@@ -94,9 +94,43 @@ Column from example was used to add % to the end of the row figures ,then the da
 |--------|-------|
 ![image](https://user-images.githubusercontent.com/99989624/224689449-f6a490f1-e016-4058-9373-71487095283d.png)|![image](https://user-images.githubusercontent.com/99989624/224689726-1884d63f-e22e-4b70-8a67-3dbead6aa4ed.png)
 
+<div align="center">
+    <h2>Clubs</h2>
+</div>
+Some club names started with 1. examples 1.fc koln , 1. fc union Berlin these were normalised . Also some other club names contained diacritic first letters and as previously explained, this makes alphabetical sorting to flop during visualiization
+
+| Before | After |
+|--------|-------|
+![image](https://user-images.githubusercontent.com/99989624/224834902-356b3ed5-c7e0-489c-87d2-b3602bc91364.png)|![image](https://user-images.githubusercontent.com/99989624/224835627-e81bbc9a-7c95-41e9-a1e3-5be5cef1ac2c.png)
 
 
+<div align="center">
+    <h2>Contract</h2>
+</div>
 
+This column contained inconsistent data type and format, hence this was reguarized using a combination of 3 columns , namely; Contracts , Joined , and Loan end date
+The filter view reveals players whose contract column specify they are on loan tally with the year on the Loan end date column.
+while players whose contract indicate free transfer tally with those clubless players with no wage or earnings . this were replaced with null as there is no specified loan end date since they're not on contract and have no recorded wages. These players should therefore be dropped during visualization.
+
+At the end of the cleaning, splitting and merging of columns we arrived at two columns : contract start and contract end which displays only the year info as lack of more data prevented further date drill down
+
+| Before | After |
+|--------|-------|
+![image](https://user-images.githubusercontent.com/99989624/224838470-25cd2741-d7bf-479b-8ff7-14d2917f498c.png)|![image](https://user-images.githubusercontent.com/99989624/224838770-df41bf1a-5391-4bdd-8a17-99c4a7da1cb5.png)
+
+Notice the data type of the contract start and contract end data type is ABC text because formating it as a date column will lead to incorrect months and day values. As the first day of the first month is automatically assigned for all rows. Thus During visualization, when formatted as date , only the year drill down should be used. 
+
+
+<div align="center">
+    <h2>Positions</h2>
+</div>
+ 
+ **Split ? Or ignore:** 
+ This column contains the position the player has ever played and some had 2 or more positions assigned to them using comma seperated values. Initial thought was to split the column by delimiter to reflect all positions however since this will lead to creating too many irrelevant data occupying memory space,a decision was reached to drop the column for the best position column as best position column contains complete information suitable for analysis
+
+| Before | After |
+|--------|-------|
+![image](https://user-images.githubusercontent.com/99989624/224841755-aac24509-7c26-40e5-b46b-4cdc8ddca9e7.png)|![image](https://user-images.githubusercontent.com/99989624/224841978-f61c750b-4ae4-40fe-9af7-8f7208547b2b.png)
 
 
 
