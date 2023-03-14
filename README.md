@@ -159,7 +159,7 @@ These three columns contains euro values in shortenend format where 1,500 euros 
 The goal is to standardise the columns and convert to US dollars
 Hence the approach used was to dropped the euro symbol from all rows using find and replace, then split columns by m and k 
 
-first step was to create a New column which If column 1 contains m multiplies the figure by 1,000,000 then if column 1 contains k multiply by 1000 else return the figure on the original column , this else function handles the values , wages or release clause in hundreds having no K or M attached (some players earn as low as 500 euro wage ).
+first step was to create a New custom column which If column 1 contains m multiplies the figure by 1,000,000 then if column 1 contains k multiply by 1000 else return the figure on the original column , this else function handles the values , wages or release clause in hundreds having no K or M attached (some players earn as low as 500 euro wage ).
 
 this approach gives the full numeric form of the value , wage or release clause but wait! we are not done yet .
 To convert this full numeric digits to USD , the average euro to USD exchange rate of 1.183 was used as this was the average exchange rate as at 2021 which our data is based on.
