@@ -106,8 +106,8 @@ Some club names started with 1. examples 1.fc koln , 1. fc union Berlin these we
 </div>
 
 This column contained inconsistent data type and format, hence this was reguarized using a combination of 3 columns , namely; Contracts , Joined , and Loan end date
-The filter view reveals players whose contract column specify they are on loan tally with the year on the Loan end date column.
-while players whose contract indicate free transfer tally with those clubless players with no wage or earnings . this were replaced with null as there is no specified loan end date since they're not on contract and have no recorded wages. These players should therefore be dropped during visualization.
+The filter view reveals players whose contract column specify they are on loan tallies with the year on the Loan end date column.
+while players whose contract indicate free transfer, tally with those clubless players with no wage or value or release clause . this were replaced with null as there is no specified loan end date since they're not on contract and have no recorded wages. These players should therefore be dropped during visualization.
 
 At the end of the cleaning, splitting and merging of columns we arrived at two columns : contract start and contract end which displays only the year info as lack of more data prevented further date drill down
 
@@ -159,7 +159,7 @@ These three columns contains euro values in shortenend format where 1,500 euros 
 The goal is to standardise the columns and convert to US dollars
 Hence the approach used was to dropped the euro symbol from all rows using find and replace, then split columns by m and k 
 
-first step was to create a New column which If column 1 contains m multiplies the figure by 100000 then if column 1 contains k multiply by 1000 else return the figure on the original column , this else function handles the values , or wages in hundreds having no K or M attached .
+first step was to create a New column which If column 1 contains m multiplies the figure by 1,000,000 then if column 1 contains k multiply by 1000 else return the figure on the original column , this else function handles the values , wages or release clause in hundreds having no K or M attached (some players earn as low as 500 euro wage ).
 
 this approach gives the full numeric form of the value , wage or release clause but wait! we are not done yet .
 To convert this full numeric digits to USD , the average euro to USD exchange rate of 1.183 was used as this was the average exchange rate as at 2021 which our data is based on.
@@ -171,7 +171,7 @@ To convert this full numeric digits to USD , the average euro to USD exchange ra
 <div align="center">
     <h2>W/F , SM , IR</h2>
 </div>
-These three columns contains player ratings in different aspect with a ranking of 1-5 . However a star symbol was attached to each row and this was removed using the replace function and the data type was changed to numeric.
+These three columns contains player ratings in different aspect with a ranking of 1-5 . However a star symbol was encoded to each row and this was removed using the replace function and the data type was changed to numeric.
 
 | Before | After |
 |--------|-------|
@@ -190,7 +190,7 @@ The filter pane reveals some figures in this column were coded in the shortened 
 <div align="center">
     <h2>CONCLUSION</h2>
 </div>
-At the end of the day, Data validation was done to verify that the data is accurate, complete, and consistent. Conclusively after what posed to be a Herculean task at first glance, i'm glad i rose up to the occassion to take the bull by the horn in participating in this #DatacleaningChallenge. This has served as a great learning curve for an Intermediate level analyst like me.
+At the end of the day, Data validation was done to verify that the data is accurate, complete, and consistent. Conclusively after what posed to be a Herculean task at first glance, i'm glad i rose up to the occassion to take the bull by the horn by participating in this #DatacleaningChallenge. This has served as a great learning curve for an Intermediate level analyst like me.
 
 Honing my analytical skills is a never ending journey hence i'm open to suggestions , recommendations and improvement .
 I'm also willing to guide other participants in this project.
